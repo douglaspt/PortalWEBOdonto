@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+   
+  <property name="hibernate.connection.password">Key@stO09</property>
+  <property name="hibernate.connection.url">jdbc:jtds:sqlserver://db-imasf-01/imasf_odontologico</property>
+  <property name="hibernate.connection.username">stOdonto</property>
+
+   <!--
+  <property name="hibernate.connection.password">key</property>
+  <property name="hibernate.connection.url">jdbc:jtds:sqlserver://fs-imasf-01/imasf_odontologico</property>   
+  <property name="hibernate.connection.username">sa</property>
+    -->
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.maxActive">5</property>
+  <property name="hibernate.maxIdle">10</property>
+  <mapping class="entidades.Desconto"/>
+  <mapping class="entidades.Usuario"/>
+  <mapping class="entidades.Lote"/>
+  <mapping class="entidades.Critica"/>  
+  <mapping class="entidades.CriticaHistorico"/>
+  <mapping class="entidades.DescontoHistorico"/>
+  <mapping class="entidades.StatusDesconto"/>
+  <mapping class="entidades.ClassificacaoCritica"/>
+  <mapping class="entidades.TipoCritica"/>
+  <mapping class="entidades.HistoricoMovimentacao"/>
+ </session-factory>
+</hibernate-configuration>
